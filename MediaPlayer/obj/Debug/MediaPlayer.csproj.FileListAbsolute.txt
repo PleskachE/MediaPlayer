@@ -1,0 +1,16 @@
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\bin\Debug\MediaPlayer.exe.config
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\bin\Debug\MediaPlayer.exe
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\bin\Debug\MediaPlayer.pdb
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.csprojAssemblyReference.cache
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\MainWindow.g.cs
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\App.g.cs
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer_MarkupCompile.cache
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer_MarkupCompile.lref
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\MainWindow.baml
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.g.resources
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.Properties.Resources.resources
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.csproj.GenerateResource.cache
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.csproj.CoreCompileInputs.cache
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.exe
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\MediaPlayer.pdb
+C:\Users\Sony\source\repos\MediaPlayer\MediaPlayer\obj\Debug\StyleDictionary.baml

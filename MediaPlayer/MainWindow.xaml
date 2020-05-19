@@ -1,0 +1,136 @@
+﻿<Window
+    x:Class="MediaPlayer.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MediaPlayer"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MediaPlayer"
+    Width="800"
+    Height="450"
+    MinWidth="600"
+    MinHeight="300"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="StyleDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Background="DarkGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <MediaElement
+                x:Name="Player"
+                Grid.Column="0"
+                Margin="10"
+                LoadedBehavior="Manual"
+                MediaEnded="Player_MediaEnded"
+                MediaOpened="Player_MediaOpened" />
+            <ListBox
+                x:Name="Playlist"
+                Grid.Column="1"
+                Width="150"
+                MinWidth="100"
+                Margin="10,10,0,10"
+                Background="Gray"
+                MouseDoubleClick="Playlist_MouseDoubleClick">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Key}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Slider
+                x:Name="Position"
+                Height="20"
+                Margin="10"
+                VerticalAlignment="Bottom"
+                Minimum="0"
+                PreviewMouseLeftButtonUp="Position_PreviewMouseLeftButtonUp" />
+            <TextBlock
+                x:Name="Time"
+                VerticalAlignment="Bottom"
+                Text="00:00:00" />
+        </Grid>
+        <StackPanel
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+                <Label Margin="5">Min</Label>
+                <Slider
+                    x:Name="VolumeSlider"
+                    Grid.Column="1"
+                    Width="100"
+                    Margin="10"
+                    VerticalAlignment="Center"
+                    Maximum="1"
+                    Minimum="0"
+                    ToolTip="Volume"
+                    Value="{Binding ElementName=Player, Path=Volume, Mode=TwoWay}" />
+                <Label Margin="5">Max</Label>
+            </StackPanel>
+            <Button
+                x:Name="PauseButt"
+                Width="45"
+                Height="45"
+                Margin="10"
+                Click="PauseButt_Click"
+                Style="{StaticResource ButtonStyle}"
+                ToolTip="Pause">
+                <Image Source="Icons/Pause.png" />
+            </Button>
+            <Button
+                x:Name="PlayButt"
+                Width="50"
+                Height="50"
+                Margin="10"
+                Click="PlayButt_Click"
+                Style="{StaticResource ButtonStyle}"
+                ToolTip="Play">
+                <Image Margin="5,0,0,0" Source="Icons/Play.png" />
+            </Button>
+            <Button
+                x:Name="StopButt"
+                Width="45"
+                Height="45"
+                Margin="10"
+                Click="StopButt_Click"
+                Style="{StaticResource ButtonStyle}"
+                ToolTip="Stop">
+                <Image Source="Icons/Stop.png" />
+            </Button>
+            <Button
+                x:Name="PlaylistButt"
+                Margin="10"
+                Click="PlaylistButt_Click"
+                Style="{StaticResource SystemButtonStyle}"
+                ToolTip="Open playlist">
+                PlayList
+            </Button>
+            <Button
+                x:Name="OpenFileButt"
+                Margin="10"
+                Click="OpenFileButt_Click"
+                Style="{StaticResource SystemButtonStyle}"
+                ToolTip="OpenFile">
+                OpenFile
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
